@@ -21,6 +21,10 @@ h6 {
   background-color: #e2e2e2;
 }
 
+.video-list-item {
+  height: 115px;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   h4 {
