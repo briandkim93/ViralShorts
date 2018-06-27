@@ -8,8 +8,9 @@ class SearchBar extends Component {
   }
   render() {
     return (
-      <div className="search-bar">
-        <input 
+      <div className="search-bar col-lg-7 my-3">
+        <input
+          className="col-12"
           type="text" 
           placeholder="Search YouTube" 
           value={this.state.query}

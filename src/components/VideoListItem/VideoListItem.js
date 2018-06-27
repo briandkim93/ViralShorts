@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { GOOGLE_API_KEY } from '../api-key.js';
+import './VideoListItem.css';
 
 class VideoItem extends Component {
   constructor(props) {
@@ -21,13 +22,14 @@ class VideoItem extends Component {
   }
   render() {
     return (
-      <li className="video-list-item" onClick={() => {this.props.onSelectVideo(this.props.video)}}>
-        <div>
+      <li className="video-list-item list-group-item px-2" onClick={() => {this.props.onSelectVideo(this.props.video)}}>
+        <div className="media">
           <img 
+            className="mr-3"
             src={this.props.video.snippet.thumbnails.default.url}
             alt='Video Thumbnail' />
-          <div>
-            <h4>{this.props.video.snippet.title}</h4>
+          <div className="media-body">
+            <h4 className="media-heading">{this.props.video.snippet.title}</h4>
             <h5>{this.props.video.snippet.channelTitle}</h5>
             <h6>View Count: {this.state.videoViewCount.toLocaleString()}</h6>
           </div>

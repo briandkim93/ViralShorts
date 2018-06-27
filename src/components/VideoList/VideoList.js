@@ -1,4 +1,6 @@
 import React from 'react';
+import './VideoList.css'
+
 import VideoListItem from '../VideoListItem/VideoListItem';
 
 const VideoList = props => {
@@ -11,11 +13,9 @@ const VideoList = props => {
     );
   });
   return (
-    <div className="video-list">
-      <ul>
-        {videoListItems}
-      </ul>
-    </div>
+    <ul className="video-list col-lg-4 list-group mx-3">
+      {videoListItems}
+    </ul>
   );
 };
 

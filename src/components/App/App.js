@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import YouTubeSearch from 'youtube-api-v3-search';
-import { GOOGLE_API_KEY } from './api-key.js';
+import { GOOGLE_API_KEY } from '../api-key.js';
 import './App.css';
 
 import SearchBar from '../SearchBar/SearchBar';
