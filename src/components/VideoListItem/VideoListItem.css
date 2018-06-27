@@ -1,0 +1,43 @@
+h4 {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 0.7rem;
+
+  color: #686868;
+}
+
+h6 {
+  font-size: 0.65rem;
+
+  color: #ababab;
+}
+
+.video-list-item:hover {
+  cursor: pointer;
+
+  background-color: #e2e2e2;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  h4 {
+    font-size: 0.9rem;
+  }
+
+  h5 {
+    font-size: 0.85rem;
+  }
+  h6 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  h4 {
+    font-size: 0.8rem;
+  }
+}
