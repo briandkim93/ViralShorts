@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import YouTubeSearch from 'youtube-api-v3-search';
+import _ from 'lodash';
 import { GOOGLE_API_KEY } from '../api-key.js';
 import './App.css';
 
@@ -35,9 +36,10 @@ class App extends Component {
   }
 
   render() {
+    const debouncedSearch = _.debounce(query => {this.getViralShorts(query)}, 200);
     return (
       <div className="app container-fluid">
-        <SearchBar onSearchTermChange={query => this.getViralShorts(query)} />
+        <SearchBar onSearchTermChange={debouncedSearch} />
         <div className="row">
           <VideoPlayer video={this.state.selectedVideo} />
           <VideoList 
