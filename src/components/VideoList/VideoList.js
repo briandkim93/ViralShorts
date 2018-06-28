@@ -60,7 +60,7 @@ class VideoList extends Component {
       segmentedVideoListItems.push(videoListItems.splice(0,5));
     }
     return (
-        <ul className="video-list col-lg-4 mx-1 list-group">
+        <ul className="video-list col-xl-4 mx-1 mb-2 list-group">
           {segmentedVideoListItems[this.state.currentPage]}
         <nav className="my-2" aria-label="Search result list navigation.">
           <ul className="pagination pagination-sm justify-content-center">
