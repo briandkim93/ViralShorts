@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from './images/logo.png';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -8,9 +9,10 @@ class SearchBar extends Component {
   }
   render() {
     return (
-      <div className="search-bar col-lg-7 my-3">
+      <div className="search-bar my-3 media">
+        <img className="align-self-center mr-2" src={logo} />
         <input
-          className="col-12"
+          className="col-12 col-xl-7 media-body"
           type="text" 
           placeholder="Search YouTube" 
           value={this.state.query}
