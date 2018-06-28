@@ -6,7 +6,7 @@ class VideoItem extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {videoViewCount: 0};
+    this.state = {videoViewCount: ''};
     this.getViewCount(this.props.video);
   }
   getViewCount(video) {
@@ -21,6 +21,12 @@ class VideoItem extends Component {
     }));
   }
   render() {
+    if (!parseInt(this.state.videoViewCount, 0)) {
+      return (
+        <li className="video-list-item list-group-item px-2">
+        </li>
+      );
+    }
     return (
       <li className="video-list-item list-group-item px-2" onClick={() => {this.props.onSelectVideo(this.props.video)}}>
         <div className="media">
