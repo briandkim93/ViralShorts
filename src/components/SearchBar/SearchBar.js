@@ -5,12 +5,12 @@ class SearchBar extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { query: '' };
+    this.state = {query: ''};
   }
   render() {
     return (
       <div className="search-bar my-3 media">
-        <img className="align-self-center mr-2" src={logo} />
+        <a href="."><img className="align-self-center mr-2" src={logo} alt="ViralShorts Logo" /></a>
         <input
           className="col-12 col-xl-7 media-body"
           type="text" 
