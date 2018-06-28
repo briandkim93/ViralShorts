@@ -3,7 +3,12 @@ import './VideoPlayer.css';
 
 const VideoPlayer = ({video}) => {
   if (!video) {
-    return <div>Loading...</div>;
+    return (
+      <div className="video-player col-xl-7 my-3">
+        <div className="embed-responsive embed-responsive-16by9">
+        </div>
+      </div>
+    );
   }
   const videoURL = `https://www.youtube.com/embed/${video.id.videoId}`;
   return (
