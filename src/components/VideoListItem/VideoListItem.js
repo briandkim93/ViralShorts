@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { GOOGLE_API_KEY } from '../api-key.js';
 import './VideoListItem.css';
 
-class VideoItem extends Component {
+class VideoListItem extends Component {
   constructor(props) {
     super(props);
 
@@ -45,4 +45,4 @@ class VideoItem extends Component {
   }
 };
 
-export default VideoItem;
+export default VideoListItem;
