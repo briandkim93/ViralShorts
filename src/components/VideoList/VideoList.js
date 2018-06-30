@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './VideoList.css'
 
 import VideoListItem from '../VideoListItem/VideoListItem';
+import Pagination from '../Pagination/Pagination';
 
 class VideoList extends Component {
   constructor(props) {
@@ -62,32 +63,10 @@ class VideoList extends Component {
     return (
         <ul className="video-list col-xl-4 mx-1 mb-2 list-group">
           {segmentedVideoListItems[this.state.currentPage]}
-        <nav className="my-2" aria-label="Search result list navigation.">
-          <ul className="pagination pagination-sm justify-content-center">
-            <li className="page-item" onClick={this.previousPage.bind(this)}>
-              <a className="page-link" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-                <span className="sr-only">Previous</span>
-              </a>
-            </li>
-            <li id="page-1" className="page-item" onClick={this.selectPage.bind(this)}><a className="page-link">1</a></li>
-            <li id="page-2" className="page-item" onClick={this.selectPage.bind(this)}><a className="page-link">2</a></li>
-            <li id="page-3" className="page-item" onClick={this.selectPage.bind(this)}><a className="page-link">3</a></li>
-            <li id="page-4" className="page-item" onClick={this.selectPage.bind(this)}><a className="page-link">4</a></li>
-            <li id="page-5" className="page-item" onClick={this.selectPage.bind(this)}><a className="page-link">5</a></li>
-            <li id="page-6" className="page-item" onClick={this.selectPage.bind(this)}><a className="page-link">6</a></li>
-            <li id="page-7" className="page-item" onClick={this.selectPage.bind(this)}><a className="page-link">7</a></li>
-            <li id="page-8" className="page-item" onClick={this.selectPage.bind(this)}><a className="page-link">8</a></li>
-            <li id="page-9" className="page-item" onClick={this.selectPage.bind(this)}><a className="page-link">9</a></li>
-            <li id="page-10" className="page-item" onClick={this.selectPage.bind(this)}><a className="page-link">10</a></li>
-            <li className="page-item" onClick={this.nextPage.bind(this)}>
-              <a className="page-link" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-                <span className="sr-only">Next</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+          <Pagination 
+            onSelectPage={event => this.selectPage(event)} 
+            onNextPage={event => this.nextPage(event)} 
+            onPreviousPage={event => this.previousPage(event)} />
         </ul>
     );
   }
