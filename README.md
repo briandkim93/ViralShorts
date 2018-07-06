@@ -9,6 +9,8 @@ In the file src/components/api-key.js, store and export your Google API key in a
 
 Then execute the following commands while in the ViralShorts directory:
 
-`npm install --save youtube-api-v3-search`
-
-`npm start`
+```
+npm install
+npm install --save youtube-api-v3-search
+npm start
+```
