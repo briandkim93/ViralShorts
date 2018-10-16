@@ -10,7 +10,7 @@ const Pagination = (props) => {
             <span className="sr-only">Previous</span>
           </a>
         </li>
-        <li id="page-1" className="page-item" onClick={props.onSelectPage}><a className="page-link">1</a></li>
+        <li id="page-1" className="active page-item" onClick={props.onSelectPage}><a className="page-link">1</a></li>
         <li id="page-2" className="page-item" onClick={props.onSelectPage}><a className="page-link">2</a></li>
         <li id="page-3" className="page-item" onClick={props.onSelectPage}><a className="page-link">3</a></li>
         <li id="page-4" className="page-item" onClick={props.onSelectPage}><a className="page-link">4</a></li>

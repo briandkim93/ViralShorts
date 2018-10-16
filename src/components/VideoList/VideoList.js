@@ -11,6 +11,13 @@ class VideoList extends Component {
     this.state = {currentPage: 0};
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.query !== prevProps.query) {
+      this.setState({currentPage: 0});
+      this.removeActive();
+    }
+  }
+
   removeActive() {
     const pageId = `page-${this.state.currentPage + 1}`;
     const pageElement = document.getElementById(pageId);
@@ -18,6 +25,7 @@ class VideoList extends Component {
       pageElement.classList.remove('active');
     }
   }
+
   addActive() {
     const pageId = `page-${this.state.currentPage + 1}`;
     const pageElement = document.getElementById(pageId);
@@ -25,11 +33,13 @@ class VideoList extends Component {
       pageElement.classList.add('active');
     }
   }
+
   selectPage(event) {
     this.removeActive();
     event.preventDefault();
     this.setState({currentPage: parseInt(event.target.textContent, 0) - 1});
   }
+
   previousPage(event) {
     event.preventDefault();
     if (this.state.currentPage > 0) {
@@ -37,6 +47,7 @@ class VideoList extends Component {
       this.setState({currentPage: this.state.currentPage - 1});
     }
   }
+  
   nextPage(event) {
     event.preventDefault();
     if (this.state.currentPage < 9) {
