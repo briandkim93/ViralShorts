@@ -1,15 +1,15 @@
-h4 {
+.video-title {
   font-size: 0.75rem;
   font-weight: bold;
 }
 
-h5 {
+.video-channel {
   font-size: 0.7rem;
 
   color: #686868;
 }
 
-h6 {
+.video-view-count {
   font-size: 0.65rem;
 
   color: #ababab;
@@ -25,23 +25,22 @@ h6 {
   height: 115px;
 }
 
-/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  h4 {
+  .video-title {
     font-size: 0.9rem;
   }
 
-  h5 {
+  .video-channel {
     font-size: 0.85rem;
   }
-  h6 {
+
+  .video-view-count {
     font-size: 0.8rem;
   }
 }
 
-/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  h4 {
+  .video-title {
     font-size: 0.8rem;
   }
 }

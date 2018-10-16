@@ -1,3 +1,11 @@
 body {
-  background-color: #FFF8F8;
+  background-color: #fff8f8;
+}
+
+.try-again {
+  font-size: 1.3rem !important;
+}
+
+.text-light-blue {
+  color: #448ccb;
 }
